@@ -61,8 +61,7 @@
                    <tr>
                     <td style="width: 90%; display: inline-block;margin: 0 auto;">
                      <span
-                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#168dc1;font-size: 28px;display:block;text-align: center;font-weight: 500;letter-spacing: 0.4px">Run
-                      Test Transactions and Explore Wallet Features</span>
+                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#168dc1;font-size: 28px;display:block;text-align: center;font-weight: 500;letter-spacing: 0.4px">Your Token Setup is Complete </span>
                     </td>
                    </tr>
                    <tr>
@@ -78,14 +77,12 @@
                     <td
                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
                      <span style="display: block;">
-                      <p><b>Hello {{attributes['First Name']}}</b><br>OST Platform is designed for you to have a feeling
-                       of the full implementation without any effort. Connect the OST Wallet to your Token and run test
-                       transactions and explore wallet features enabled through the Wallet SDK.</p>
-                      <p>Step 1: Launch Your Own Token
-                       <br>Step 2: Mint Your First Batch of Tokens
-                       <br><b>Step 3: Run Transactions in the OST Wallet App</b>
-                       <br>Step 4: Integrate OST APIs into Your App and Go-Live!
-                      </p>
+                       <p><b>Hello {{attributes['First Name']}}</b><br>You Token setup is complete. Next, mint some Tokens and run test transactions in the OST Wallet App.</p>
+                       <p>Step 1: Launch Your Own Token
+                        <br><b>Step 2: Mint Your First Batch of Tokens</b>
+                        <br>Step 3: Run Transactions in the OST Wallet App
+                        <br>Step 4: Integrate OST APIs into Your App and Go-Live!
+                       </p>
                      </span>
                     </td>
                    </tr>
@@ -94,9 +91,9 @@
                    </tr>
                    <tr>
                     <td>
-                     <a href="https://platform.ost.com/testnet/wallet"
+                     <a href="{{company_web_domain}}/{{url_prefix}}/token/mint"
                       style="border-radius:3px;background-color:#e4b030;color:#fff;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                      title="Token Creation Guide">Run Transactions</a>
+                      title="Token Creation Guide">Mint Tokens</a>
                     </td>
                    </tr>
                    <tr>
@@ -108,49 +105,45 @@
                   </tbody>
                  </table>
 
-                 <!--- Slack card -->
-                 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="background-color:#34445B">
-                  <tbody>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                   <tr>
-                    <td style="text-align: center">
-                     <a
-                      href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
-                      title="OST - Slack">
-                      <img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="OST Slack"
-                       width="50px">
-                     </a>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td
-                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fff;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.5px">
-                     <span style="display: block;">
-                      <p>Join our Slack space to discuss your use case with other developers, receive live support,
-                       integration tips and more.
-                      </p>
-                     </span>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td style="height: 10px"></td>
-                   </tr>
-                   <tr>
-                    <td>
-                     <a
-                      href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
-                      style="border-radius:3px;background-color:#fff;color:#34445B;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                      title="Join OST on Slack">Join OST on Slack!</a>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                  </tbody>
-                 </table>
-                 ​
+                 <!--- OST View -->
+                 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="background-color:#438BAD">
+                   <tbody>
+                    <tr>
+                     <td style="height: 20px"></td>
+                    </tr>
+                    <tr>
+                     <td style="text-align: center">
+                      <a href="{{view_link}}" title="OST Slack">
+                       <img src="https://email.ost.com/production/eu/gallery/22436/1564561606640.png" alt="OST VIEW"
+                        width="50px">
+                      </a>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td
+                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fff;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.5px">
+                      <span style="display: block;">
+                       <p>Your Token Smart Contracts are now on the Ethereum and OST Blockchains. You can view and
+                        explore the contracts and related transactions via the OST Block Explorer.
+                       </p>
+                      </span></td>
+                    </tr>
+                    <tr>
+                     <td style="height: 10px"></td>
+                    </tr>
+                    <tr>
+                     <td>
+                      <a href="{{view_link}}"
+                       style="border-radius:3px;background-color:#fff;color:#34445B;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
+                       title="Explore Token Contracts">Explore Contracts</a>
+                     </td>
+                    </tr>
+                    <tr>
+                     <td style="height: 20px"></td>
+                    </tr>
+                   </tbody>
+                  </table>
+                                   ​
                  <!--- Footer / Connect with us links -->
                  <table border="0" cellspacing="0" cellpadding="0" width="100%">
                   <tbody>
