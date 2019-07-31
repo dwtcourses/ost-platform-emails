@@ -61,8 +61,8 @@
                    <tr>
                     <td style="width: 90%; display: inline-block;margin: 0 auto;">
                      <span
-                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#168dc1;font-size: 28px;display:block;text-align: center;font-weight: 500;letter-spacing: 0.4px">Your
-                      Tokens Have Been Minted</span>
+                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#168dc1;font-size: 28px;display:block;text-align: center;font-weight: 500;letter-spacing: 0.4px">Claim
+                      Your Tokens in OST Wallet</span>
                     </td>
                    </tr>
                    <tr>
@@ -77,46 +77,94 @@
                    <tr>
                     <td
                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
-                     <span style="display: block;">
-                      <p><b>Hello {{attributes['First Name']}}</b><br>
-                       Your Tokens have been minted. Next, run test transactions in the OST Wallet App.</p>
-                      <p>Step 1: Launch Your Own Token
-                       <br>Step 2: Mint Your First Batch of Tokens
-                       <br><b>Step 3: Run Transactions in the OST Wallet App</b>
-                       <br>Step 4: Integrate OST APIs into Your App and Go-Live!
-                      </p>
+                     <span style="display: block;">You have been invited to join your team in OST Wallet. Run test
+                      transactions here first before launching your own token and embarking on a full integration with
+                      OST Platform.
                      </span>
+                     <br>
+                     <span style="display: block;"><b>Step 1:</b> Download the OST Wallet app on your mobile device.
+                      iPhone users need to first download the Test Flight app from the Apple App Store to add OST Wallet
+                      to your phone.
+                     </span>
+                     <br>
                     </td>
                    </tr>
+
+                   <!--- Download apps -->                   
+                   <tr>
+                    <td style="text-align:center">
+                     <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                      <tbody>
+                       <tr>
+                        <td style="text-align: right">
+                         <a href="https://testflight.apple.com/join/gexbd3Bu" title="iOS - Download App">
+                          <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1558956134684.png"
+                           width="150">
+                         </a>
+                        </td>
+                        <td style="width: 10px"></td>
+                        <td style="text-align: left"><a
+                          href="https://play.google.com/store/apps/details?id=com.ost.ostwallet"
+                          title="Android - Download App">
+                          <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1560939118196.png"
+                           width="150">
+                         </a>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                   </tr>
+
+                   <!--- Spacer -->  
                    <tr>
                     <td style="height: 20px"></td>
                    </tr>
+
+                   <!--- Step 2 -->  
+                   <tr>
+                    <td
+                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
+                     <span style="display: block;"><b>Step 2:</b> To join the Popcorn economy, click the button below
+                      <b>on
+                       your mobile device</b> <u>or</u> scan the QR code from within the OST Wallet app.</span>
+                    </td>
+                   </tr>
+
+                   <!--- Spacer -->  
+                   <tr>
+                    <td style="height: 20px"></td>
+                   </tr>
+
+                   <!--- Scan QR code --> 
                    <tr>
                     <td>
-                     <a href="https://platform.ost.com/testnet/wallet"
+                     {% assign join_economy_url = "https://ost.com/ost-wallet/launch/?ld=%7B%22token_id%22%3A1400%2C%22token_name%22%3A%22Popcorn%22%2C%22token_symbol%22%3A%22POP%22%2C%22url_id%22%3A%2255c0c94b98ef6362e7d2d10fe60572819d7d31e54f8017aaba95eb225cc1bff7%22%2C%22mappy_api_endpoint%22%3A%22https%3A%2F%2Fdemo-mappy.ost.com%2Fdemo%2F%22%2C%22saas_api_endpoint%22%3A%22https%3A%2F%2Fapi.ost.com%2Ftestnet%2Fv2%2F%22%2C%22view_api_endpoint%22%3A%22https%3A%2F%2Fview.ost.com%2Ftestnet%2F%22%2C%22ios_app_download_link%22%3A%22https%3A%2F%2Ftestflight.apple.com%2Fjoin%2Fgexbd3Bu%22%2C%22android_app_download_link%22%3A%22https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ost.ostwallet%22%7D" %}
+                     <a href="{{join_economy_url}}{{exclude_tracking}}"
                       style="border-radius:3px;background-color:#e4b030;color:#fff;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                      title="Token Creation Guide">Run Transactions</a>
+                      title="Connect To Economy"> Join Economy </a>
                     </td>
                    </tr>
+
                    <tr>
                     <td style="height: 20px"></td>
                    </tr>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
+                   
                   </tbody>
                  </table>
 
-                 <!--- OST View -->
-                 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="background-color:#438BAD">
+                 <!--- Slack card -->
+                 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="background-color:#34445B">
                   <tbody>
                    <tr>
                     <td style="height: 20px"></td>
                    </tr>
                    <tr>
                     <td style="text-align: center">
-                     <a href="{{view_link}}" title="OST Slack">
-                      <img src="https://email.ost.com/production/eu/gallery/22436/1564561606640.png" alt="OST VIEW"
+                     <a
+                      href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
+                      title="OST - Slack">
+                      <img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="OST Slack"
                        width="50px">
                      </a>
                     </td>
@@ -125,19 +173,21 @@
                     <td
                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fff;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.5px">
                      <span style="display: block;">
-                      <p>Your Token Smart Contracts are now on the Ethereum and OST Blockchains. You can view and
-                       explore the contracts and related transactions via the OST Block Explorer.
+                      <p>Join our Slack space to discuss your use case with other developers, receive live support,
+                       integration tips and more.
                       </p>
-                     </span></td>
+                     </span>
+                    </td>
                    </tr>
                    <tr>
                     <td style="height: 10px"></td>
                    </tr>
                    <tr>
                     <td>
-                     <a href="{{view_link}}"
+                     <a
+                      href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
                       style="border-radius:3px;background-color:#fff;color:#34445B;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                      title="Explore Token Contracts">Explore Contracts</a>
+                      title="Join OST on Slack">Join OST on Slack!</a>
                     </td>
                    </tr>
                    <tr>
@@ -165,7 +215,6 @@
                    </tr>
                   </tbody>
                  </table>
-
                 </td>
                </tr>
               </tbody>
