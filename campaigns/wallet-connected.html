@@ -61,8 +61,7 @@
                    <tr>
                     <td style="width: 90%; display: inline-block;margin: 0 auto;">
                      <span
-                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#168dc1;font-size: 28px;display:block;text-align: center;font-weight: 500;letter-spacing: 0.4px">Claim
-                      Your Tokens in OST Wallet</span>
+                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#168dc1;font-size: 28px;display:block;text-align: center;font-weight: 500;letter-spacing: 0.4px">Wallet Connected</span>
                     </td>
                    </tr>
                    <tr>
@@ -78,101 +77,26 @@
                     <td
                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
                      <span style="display: block;">
-                      <p>Hello {{attributes['First Name']}},<br>You have been invited to join the OST Wallet App. Follow
-                       the instructions below to claim your POP tokens and start sending and receiving tokens!
-                     </span>
-                     <br>
-                     <br>
-                     <span style="display: block;"><b>Step 1 - </b> Download the OST Wallet app on your mobile device.
-                      iPhone users need to first download the Test Flight app from the App Store.
-                     </span>
-                     <br>
-                    </td>
+                      <p>Hi ..., <br>Message 1<br>
+                      </p>
+                     </span></td>
                    </tr>
-
-                   <!--- Download apps -->
-                   <tr>
-                    <td style="text-align:center">
-                     <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                      <tbody>
-                       <tr>
-                        <td style="text-align: right">
-                         <a href="https://testflight.apple.com/join/gexbd3Bu" title="iOS - Download App">
-                          <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1558956134684.png"
-                           width="150">
-                         </a>
-                        </td>
-                        <td style="width: 10px"></td>
-                        <td style="text-align: left"><a
-                          href="https://play.google.com/store/apps/details?id=com.ost.ostwallet"
-                          title="Android - Download App">
-                          <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1560939118196.png"
-                           width="150">
-                         </a>
-                        </td>
-                       </tr>
-                      </tbody>
-                     </table>
-                    </td>
-                   </tr>
-
-                   <!--- Spacer -->
                    <tr>
                     <td style="height: 20px"></td>
                    </tr>
-
-                   <!--- Step 2 -->
-                   <tr>
-                    <td
-                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
-                     <span style="display: block;"><b>Step 2 - </b> Click the button below on your mobile device.</span>
-                    </td>
-                   </tr>
-
-                   <!--- Spacer -->
-                   <tr>
-                    <td style="height: 40px"></td>
-                   </tr>
-
-                   <!--- Click button -->
                    <tr>
                     <td>
-                     {% assign join_economy_url = "https://ost.com/ost-wallet/launch/?ld=%7B%22token_id%22%3A1400%2C%22token_name%22%3A%22Popcorn%22%2C%22token_symbol%22%3A%22POP%22%2C%22url_id%22%3A%2255c0c94b98ef6362e7d2d10fe60572819d7d31e54f8017aaba95eb225cc1bff7%22%2C%22mappy_api_endpoint%22%3A%22https%3A%2F%2Fdemo-mappy.ost.com%2Fdemo%2F%22%2C%22saas_api_endpoint%22%3A%22https%3A%2F%2Fapi.ost.com%2Ftestnet%2Fv2%2F%22%2C%22view_api_endpoint%22%3A%22https%3A%2F%2Fview.ost.com%2Ftestnet%2F%22%2C%22ios_app_download_link%22%3A%22https%3A%2F%2Ftestflight.apple.com%2Fjoin%2Fgexbd3Bu%22%2C%22android_app_download_link%22%3A%22https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ost.ostwallet%22%7D" %}
-                     <a href="{{join_economy_url}}{{exclude_tracking}}"
+                     <a href="https://{{company_web_domain}}/{{url_prefix}}"
                       style="border-radius:3px;background-color:#e4b030;color:#fff;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                      title="Claim Tokens">Claim Tokens</a>
+                      title="Go to OST Platform">CTA 1</a>
                     </td>
                    </tr>
-
-                   <!--- Spacer -->
-                   <tr>
-                    <td style="height: 40px"></td>
-                   </tr>
-
-                   <!--- QR code -->
-                   <tr>
-                    <td
-                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
-                     <span style="display: block;">Your Token QR code is below. Others can scan this to claim tokens and
-                      join you in the app.</span>
-                    </td>
-                   </tr>
-
                    <tr>
                     <td style="height: 20px"></td>
                    </tr>
                    <tr>
-                    <td style="text-align: center">
-                     <img
-                      src="https://ci4.googleusercontent.com/proxy/LZPrKGlhkaCupVHfJxNNyMD17C28sdMXP8S54eDffqtPWjMzmj_d_5X5hd2jNKjDXXz6SxCRuxDsPQRYRrkqdIatM0rHsYVqhKouTuQ0R5FmjFBm38sfnPwqe_BV1s_Ip-N4V02UwV95aMOFQPUyns-e5bwoaJ6kIticUCLtYEWcaTLDU53PD2gactIlhQhs-BGCbBr8o12xLI9KuXid77k9DWQoFQ6qT7VjpV9hFA=s0-d-e1-ft#https://s3-eu-west-1.amazonaws.com/public.ost.com/p4-sandbox/test-economy/qr-code/1406/55c0c94b98ef6362e7d2d10fe60572819d7d31e54f8017aaba95eb225cc1bff7.png"
-                      alt="QR code URL" height="300" width="300">
-                    </td>
-                   </tr>
-
-                   <tr>
                     <td style="height: 20px"></td>
                    </tr>
-
                   </tbody>
                  </table>
 
@@ -218,7 +142,65 @@
                    </tr>
                   </tbody>
                  </table>
+
+                 <!--- Space seperator-->
+                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                  <tbody>
+                   <tr>
+                    <td style="height: 60px"></td>
+                   </tr>
+                  </tbody>
+                 </table>
+                 
+                 <!--- Documentation card -->
+                 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="background-color:#FBD764">
+                  <tbody>
+                   <tr>
+                    <td style="height: 20px"></td>
+                   </tr>
+                   <tr>
+                    <td style="text-align: center">
+                     <a href="https://dev.ost.com" title="OST - Developer Resources">
+                      <img src="https://email.ost.com/production/eu/gallery/22436/1564596494296.png"
+                       alt="OST Developer Resources" width="50px">
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td
+                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#34445B;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.5px">
+                     <span style="display: block;">
+                      <p>Our goal is to make OST Platform accessible and implementable in the fastest time possible. You
+                       can
+                       always refer to our DOCs, SDKs and APIs References throughout your integration.
+                      </p>
+                     </span></td>
+                   </tr>
+                   <tr>
+                    <td style="height: 10px"></td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="https://dev.ost.com"
+                      style="border-radius:3px;background-color:#fff;color:#34445B;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
+                      title="Explore Developer Resources">Developer Resources</a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td style="height: 20px"></td>
+                   </tr>
+                  </tbody>
+                 </table>
                  ​
+                 <!--- Space seperator-->
+                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                  <tbody>
+                   <tr>
+                    <td style="height: 10px"></td>
+                   </tr>
+                  </tbody>
+                 </table>
+
                  <!--- Footer / Connect with us links -->
                  <table border="0" cellspacing="0" cellpadding="0" width="100%">
                   <tbody>
@@ -226,7 +208,7 @@
                     <td
                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#000;font-size: 15px;display:block;text-align: left;font-weight: 500;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
                      <span style="display: block; text-align: center">
-                      <p><span style="color:#597a84">Connect with us</span><br><a
+                      <p><span style="color: gray">Connect with us</span><br><a
                         href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
                         style="text-decoration: none"><img
                          src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="OST Slack"
@@ -276,6 +258,7 @@
            </tr>
           </tbody>
          </table>
+
         </td>
        </tr>
       </tbody>
