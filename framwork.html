@@ -5,7 +5,8 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Flexbox Basics</title>
+ <title>OST Platform Emails</title>
+ <!-- <link rel="stylesheet" href=""> -->
 
  <style>
   * {
@@ -13,21 +14,23 @@
   }
 
   body {
-   background-color: #aaa;
-   max-width: 540px;
+   background-color: rgb(238, 238, 238);
+   max-width: 600px;
    margin: 50px auto;
    padding: 0px;
    color: #34445b;
    text-align: center;
    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-   -webkit-text-size-adjust: none;
+   font-weight: 300;
+   line-height: 1.2;
    text-rendering: optimizeLegibility;
+   -webkit-text-size-adjust: none;
   }
 
   .container {
    display: flex;
    flex-direction: column;
-   background-color: #f5ca3c;
+   background-color: #fff;
    border-radius: 5px;
    padding: 20px 0px;
   }
@@ -38,7 +41,7 @@
   }
 
   .header h1 {
-   font-size: 28px;
+   font-size: 24px;
    font-weight: 500;
    margin: 10px 0px;
   }
@@ -49,8 +52,33 @@
    border-radius: 10px;
    width: 540px;
    padding: 2rem;
-   margin: 10px 0px;
-   font-size: 2em;
+   margin: 10px auto;
+   font-weight: 300;
+  }
+
+  .item img {
+   width: 50px;
+  }
+
+  .item h1 {
+   font-size: 18px;
+   font-weight: 350;
+  }
+
+  .item p {
+   text-align: left;
+  }
+
+  .cta-button {
+   display: inline-block;
+   background-color: #fff;
+   border-radius: 3px;
+   font-size: 16px;
+   font-weight: 300;
+   letter-spacing: 1px;
+   text-decoration: none;
+   padding: 15px 30px;
+   margin-top: 15px;
   }
 
   .item-main {
@@ -88,6 +116,15 @@
    border: #438BAD;
   }
 
+  .connect {
+   margin-top: 15px;
+  }
+
+  .connect img {
+   width: 15px;
+   margin: 0px 5px -3px 15px;
+  }
+
   .footer {
    color: #000;
    font-size: 10px;
@@ -107,7 +144,6 @@
    color: #fff;
    text-decoration: none;
   }
-
  </style>
 
 </head>
@@ -115,9 +151,9 @@
 <body>
  <div class="container">
   <div class="logo">
-    <a href="https://platform.ost.com/" title="OST Platform">
-     <img src="https://email.ost.com/production/eu/gallery/22436/1553275678842.png" alt="OST Platform">
-    </a>
+   <a href="https://platform.ost.com/" title="OST Platform">
+    <img src="https://email.ost.com/production/eu/gallery/22436/1553275678842.png" alt="OST Platform">
+   </a>
   </div>
 
   <div class="header">
@@ -125,12 +161,41 @@
   </div>
 
   <div class="item item-main">main</div>
-  <div class="item item-slack">slack</div>
+
+  <div class="item item-slack">
+   <a
+    href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
+    title="OST Slack"><img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="OST Slack">
+   </a>
+   <h1>Header here</h1>
+   <p>Join our Slack space to discuss your use case with other developers, receive live support, integration tips and
+    more.</p>
+   <a
+    href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
+    class="cta-button" title="Join Our Slack Space">Join Our Slack Space</a>
+  </div>
+
   <div class="item item-call">call</div>
+
   <div class="item item-docs">docs</div>
+
   <div class="item item-popcorn">popcorn</div>
+
   <div class="item item-token">token</div>
+
   <div class="item item-view">view</div>
+
+  <div class="connect">
+    <a href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk">
+     <img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="OST Slack">Slack</a>
+
+    <a href="https://dev.ost.com">
+     <img src="https://email.ost.com/production/eu/gallery/22436/1564596494296.png" alt="OST Docs">Docs</a>
+
+    <a href="https://gitter.im/ostdotcom/OST-Platform">
+     <img src="https://email.ost.com/production/eu/gallery/22436/1564599957558.png" alt="OST Gitter">Gitter</a>
+   
+  </div>
  </div>
 
  <div class="footer">
