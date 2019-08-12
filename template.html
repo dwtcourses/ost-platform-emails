@@ -1,313 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>OST Platform Email</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>OST Platform</title>
 
- <style>
-  * {
-   box-sizing: border-box;
+ <!--- Inspiration: https://github.com/seanpowell/Email-Boilerplate/blob/master/email.html -->
+ <style type="text/css">
+  #outlook a {
+   padding: 0;
   }
 
   body {
-   background-color: #fff;
-   max-width: 600px;
-   margin: 50px auto;
-   padding: 0px;
-   color: #34445b;
-   text-align: center;
-   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-   font-size: 15px;
-   font-weight: 300;
-   line-height: 1.5;
-   letter-spacing: 0.5px;
+   width: 100% !important;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+   margin: 0;
+   padding: 0;
    text-rendering: optimizeLegibility;
-   -webkit-text-size-adjust: none;
   }
 
-  a {
-   color: #34445b;
-   text-decoration: none;
+  .ExternalClass {
+   width: 100%;
   }
 
-  h1 {
-   text-transform: capitalize;
+  .ExternalClass,
+  .ExternalClass p,
+  .ExternalClass span,
+  .ExternalClass font,
+  .ExternalClass td,
+  .ExternalClass div {
+   line-height: 100%;
   }
 
-  .container {
-   display: flex;
-   flex-direction: column;
-   background-color: #fff;
-   border-radius: 5px;
-   padding-top: 20px;
+  #backgroundTable {
+   margin: 0;
+   padding: 0;
+   width: 100% !important;
+   line-height: 100% !important;
   }
 
-  .logo img {
-   width: 94px;
-   padding: 20px 0px;
+  table td {
+   border-collapse: collapse;
   }
 
-  .title h1 {
-   font-size: 22px;
-   font-weight: 500;
-   margin: 10px 0px;
+
+  @media only screen and (max-device-width: 480px) {
+
+   a[href^="tel"],
+   a[href^="sms"] {
+    text-decoration: none;
+    color: #34445b;
+    pointer-events: none;
+    cursor: default;
+   }
+
+   .mobile_link a[href^="tel"],
+   .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important;
+    pointer-events: auto;
+    cursor: default;
+   }
   }
 
-  .item {
-   background-color: #fff;
-   border: 1px solid;
-   border-radius: 15px;
-   width: 540px;
-   padding: 2rem;
-   margin: 12px auto;
-   font-weight: 300;
-  }
+  /* iPad (tablets, smaller screens, etc.) */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-  .item img {
-   width: 45px;
-  }
+   a[href^="tel"],
+   a[href^="sms"] {
+    text-decoration: none;
+    color: #34445b;
+    /* or whatever your want */
+    pointer-events: none;
+    cursor: default;
+   }
 
-  .item h1 {
-   font-size: 18px;
-   font-weight: 350;
-   margin: 10px 0px;
-  }
-
-  .item p {
-   text-align: left;
-  }
-
-  .item-main {
-   background-color: #fff;
-  }
-
-  .item-main .cta-button {
-   background-color: #e4b030;
-   color: #fff;
-  }
-
-  .item-slack {
-   background-color: #34445B;
-   border: #34445B;
-   color: #fff;
-  }
-
-  .item-call {
-   background-color: #FF5F5A;
-   border: #FF5F5A;
-   color: #fff;
-  }
-
-  .item-docs {
-   background-color: #FBD764;
-   border: #FBD764;
-  }
-
-  .item-popcorn {
-   background-color: #FF8385;
-   border: #FF8385;
-  }
-
-  .item-token {
-   background-color: #CCD3CD;
-   border: #CCD3CD;
-  }
-
-  .item-view {
-   background-color: #438BAD;
-   border: #438BAD;
-   color: #fff;
-  }
-
-  .item-benefits {
-   background-color: #FBD764;
-   border: #FBD764;
-   text-transform: capitalize;
-  }
-
-  .cta-button {
-   display: inline-block;
-   background-color: #fff;
-   border-radius: 5px;
-   border: 1px solid #CCD3CD;
-   font-size: 16px;
-   font-weight: 300;
-   letter-spacing: 1px;
-   text-decoration: none;
-   text-transform: capitalize;
-   padding: 15px 30px;
-   margin-top: 15px;
-  }
-
-  .social-links {
-   margin-top: 15px;
-   font-size: 14px;
-   font-weight: 400;
-   text-decoration: none;
-  }
-
-  .social-links img {
-   width: 15px;
-   margin: 0px 5px -3px 15px;
-  }
-
-  .footer {
-   color: #000;
-   font-size: 10px;
-   font-weight: 300;
-   line-height: 1.6;
-   display: block;
-   margin: 30px 0px 10px;
-  }
-
-  .footer-unsubscribe a {
-   color: #fff;
-   text-decoration: none;
+   .mobile_link a[href^="tel"],
+   .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important;
+    pointer-events: auto;
+    cursor: default;
+   }
   }
  </style>
 
 </head>
 
 <body>
- <div class="container">
 
-  <!--- logo -->
-  <div class="logo">
-   <a href="https://platform.ost.com/" title="OST Platform">
-    <img src="https://email.ost.com/production/eu/gallery/22436/1553275678842.png" alt="OST Platform">
-   </a>
-  </div>
+ <!--- pretext header -->
+ <span
+  style="color: transparent; display: none !important; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">...</span>
 
-  <!--- title -->
-  <div class="title">
-   <h1>This is a title</h1>
-  </div>
 
-  <!--- main body section -->
-  <div class="item item-main">
-   <h1>Header here</h1>
-   <p>Content here
-   </p>
-   <a href="" class="cta-button" title="Join Our Slack Space">Click Here!</a>
-  </div>
+ <!--- background table -->
+ <table role="presentation" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="backgroundTable"
+  style="margin:50px auto; max-width:600px; padding:0;">
+  <tr>
+   <td>
 
-  <!--- join our slack space -->
-  <div class="item item-slack">
-   <a
-    href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
-    title="Join Our Slack Space"><img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png"
-     alt="Join Our Slack Space">
-   </a>
-   <p>Join our Slack space to discuss your token use cases with other developers, receive live support, integration tips
-    and
-    more.
-   </p>
-   <a
-    href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
-    class="cta-button" title="Join Our Slack Space">Join Slack Space</a>
-  </div>
+    <!--- logo and title -->
+    <table role="header" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin:0px auto; padding:10px 20px;">
 
-  <!--- schedule call -->
-  <div class="item item-call">
-   <a href="https://calendly.com/kevinfs510" title="Schedule Call"><img
-     src="https://email.ost.com/production/eu/gallery/22436/1564596072683.png" alt="Schedule Call">
-   </a>
-   <p>
-    The quickest way to get familiar with OST Platform is to schedule a call with one of our Product Experts. You will
-    learn about essential features, best practices and tips and tricks.
-   </p>
-   <a href="https://calendly.com/kevinfs510" class="cta-button" title="Schedule Call">Schedule Call</a>
-  </div>
+     <!-- logo -->
+     <tr>
+      <td width="100%" valign="top" align="center" style="padding:20px;">
+       <a href="https://platform.ost.com/" title="OST Platform">
+        <img src="https://email.ost.com/production/eu/gallery/22436/1553275678842.png" alt="OST Platform" width="94px"
+         height="" style="border:0; outline:none; text-decoration:none; display:block;">
+       </a>
+      </td>
+     </tr>
 
-  <!--- explore our docs -->
-  <div class="item item-docs">
-   <a href="https://dev.ost.com" title="Developer Resources"><img
-     src="https://email.ost.com/production/eu/gallery/22436/1564596494296.png" alt="Developer Resources">
-   </a>
-   <p>
-    Our goal is to make OST Platform accessible and implementable in the fastest time possible. You can always refer to
-    our DOCs, SDKs and APIs References throughout your integration.
-   </p>
-   <a href="https://dev.ost.com" class="cta-button" title="Developer Resources">Developer Resources</a>
-  </div>
+     <!-- title -->
+     <tr>
+      <td width="100%" valign="top" align="center">
+       <h1
+        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:22px; font-weight:500; text-transform: capitalize; letter-spacing:0.5px; padding:10px 20px 0; margin:0 auto;">
+        I'm a title
+       </h1>
+      </td>
+     </tr>
+    </table>
 
-  <!--- join popcorn -->
-  <div class="item item-popcorn">
-   <a href="https://ost.com/" title="Join Popcorn!"><img
-     src="https://email.ost.com/production/eu/gallery/22436/1564667190337.png" alt="Join Popcorn!" width="50px">
-   </a>
-   <p>
-    Join Popcorn and start sending and receiving POP tokens now! Sign-up on our homepage to download OST Wallet App and
-    see what's possible with OST Platform.
-   </p>
-   <a href="https://ost.com/" class="cta-button" title="Joint Popcorn!">Join Popcorn!</a>
-  </div>
+    <!--- table for main text box -->
+    <table role="header" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin:0px auto; padding:10px 20px;">
 
-  <!--- launch your own token -->
-  <div class="item item-token">
-   <a href="https://platform.ost.com/sign-up" title="Launch Token"><img
-     src="https://email.ost.com/production/eu/gallery/22436/1564599290603.png" alt="Launch Token">
-   </a>
-   <p>
-    Launching a Token in your own application is easy with OST Platform. Once registered, OST Platform takes care of the
-    setup, while our Dev Docs guide you through a fast and smooth integration of our SDKs.
-   </p>
-   <a href="https://platform.ost.com/sign-up" class="cta-button" title="Launch Token">Launch Token</a>
-  </div>
+     <!-- main text box -->
+     <tr style="margin-bottom:20px;">
+      <td width="100%" valign="top" style="padding:0 20px; border:1px solid; border-radius: 15px; border-color:#ffffff">
+       <p
+        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; margin:0">
+        Main text box :)
+       </p>
+      </td>
+     </tr>
+    </table>
 
-  <!--- explore ost view -->
-  <div class="item item-view">
-   <a href="{{view_link}}" title="OST View"><img
-     src="https://email.ost.com/production/eu/gallery/22436/1564561606640.png" alt="OST View">
-   </a>
-   <p>
-    Your token smart-contracts are on the Ethereum and OST Blockchains. You can view and explore the contracts and
-    related transactions through the OST Block Explorer.
-   </p>
-   <a href="{{view_link}}" class="cta-button" title="Token Contracts">Token Contracts</a>
-  </div>
+    <!-- table for cards -->
+    <table role="presentation" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding: 10px 20px;">
+     <tbody>
 
-  <!--- benefits card -->
-  <div class="item item-benefits">
-   <a href="..." title="OST Platform Benefits"><img
-     src="https://email.ost.com/production/eu/gallery/22436/1565107358673.png" alt="OST Platform Benefits">
-   </a>
-   <h1>This is a sample heading!</h1>
-   <p>
-    A token is ideal for businesses with a strong brand identity. The user base of these businesses are eager to own a
-    piece of what defines them. Ownership is a strong USP for these businesses who can count on fanatic engagement by
-    their users.
-   </p>
-   <a href="..." class="cta-button" title="Explore Contracts">Read More</a>
-  </div>
+      <!-- sample card -->
+      <tr>
+       <td width="100%" valign="top" align="center"
+        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius: 15px; border-color:red;">
+        <a href="" title="Sample Title"><img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png"
+          alt="Sample Alt Text" width="45px" height="" style="margin:0; border:0; outline:none; text-decoration:none;">
+        </a>
+        <p align="left" style="padding:15px 0; margin:0">
+         Sample text........
+        </p>
+        <a
+         style="display:inline-block; background-color:#e4b030; border-radius:5px; border:1px solid #e4b030; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+         href="" title="Join Our Slack Space">Sample CTA</a>
+       </td>
+      </tr>
 
-  <!--- social links -->
-  <div class="social-links">
-   <a
-    href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk">
-    <img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="Join Our Slack Space">Slack</a>
+      <!-- spacer -->
+      <tr>
+       <td style="height: 30px"></td>
+      </tr>
 
-   <a href="https://twitter.com/ostdotcom">
-    <img src="http://s3.amazonaws.com/asset.pepomail.com/common-assets/images/social-logos/twitter_v3.png"
-     alt="Join Us On Twitter">Twitter</a>
+      <!-- slack -->
+      <tr>
+       <td width="100%" valign="top" align="center" bgcolor="#34445B"
+        style="color:#ffffff !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius:15px; border-color:#34445B">
+        <a
+         href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
+         title="Join Our Slack Space"><img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png"
+          alt="Join Our Slack Space" width="45px" height=""
+          style="margin:0; border:0; outline:none; text-decoration:none;">
+        </a>
+        <p align="left" style="padding:15px 0; margin:0">
+         Join our Slack space to discuss your token use cases with other developers, receive live support, integration
+         tips and more.
+        </p>
+        <a
+         style="display:inline-block; background-color:#ffffff; border-radius:5px; border:1px solid #CCD3CD; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+         href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
+         title="Join Our Slack Space">Join Slack Space</a>
+       </td>
+      </tr>
 
-   <a href="https://medium.com/ostdotcom">
-    <img src="http://s3.amazonaws.com/asset.pepomail.com/common-assets/images/social-logos/medium_v3.png"
-     alt="Join Us On Medium">Medium</a>
-  </div>
+      <!-- spacer -->
+      <tr>
+       <td style="height: 30px"></td>
+      </tr>
 
- </div>
+      <!-- schedule call -->
+      <tr>
+       <td width="100%" valign="top" align="center" bgcolor="#FF5F5A"
+        style="color:#ffffff !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius:15px; border-color:#FF5F5A">
+        <a href="https://calendly.com/kevinfs510" title="Schedule Call"><img
+          src="https://email.ost.com/production/eu/gallery/22436/1564596072683.png" alt="Schedule Call" width="45px"
+          height="" style="margin:0; border:0; outline:none; text-decoration:none;">
+        </a>
+        <p align="left" style="padding:15px 0; margin:0">
+         The quickest way to get familiar with OST Platform is to schedule a call with one of our Product Experts. You
+         will
+         learn about essential features, best practices and tips and tricks.
+        </p>
+        <a
+         style="display:inline-block; background-color:#ffffff; border-radius:5px; border:1px solid #CCD3CD; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+         href="https://calendly.com/kevinfs510" title="Schedule Call">Schedule Call</a>
+       </td>
+      </tr>
 
- <!--- footer incl unsubscribe and beacon -->
- <div class="footer">
-  <p>OST Inc. All Rights Reserved.<br>33 Irving Place, Suite 4008, New York, NY 10003</p>
-  <p><a href="mailto:support@ost.com">support@ost.com</a></p>
-  <p class="footer-unsubscribe"><a href="{{optout_confirm_url}}" title="Unsubscribe">Unsubscribe</a></p>
-  <span>{{beacon}}</span>
- </div>
+      <!-- spacer -->
+      <tr>
+       <td style="height: 30px"></td>
+      </tr>
+
+      <!-- explore our docs -->
+      <tr>
+       <td width="100%" valign="top" align="center" bgcolor="#FBD764"
+        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius:15px; border-color:#FBD764">
+        <a href="https://dev.ost.com" title="Developer Resources"><img
+          src="https://email.ost.com/production/eu/gallery/22436/1564596494296.png" alt="Developer Resources"
+          width="45px" height="" style="margin:0; border:0; outline:none; text-decoration:none;">
+        </a>
+        <p align="left" style="padding:15px 0; margin:0">
+         Our goal is to make OST Platform accessible and implementable in the fastest time possible. You can always
+         refer to
+         our DOCs, SDKs and APIs References throughout your integration.
+        </p>
+        <a
+         style="display:inline-block; background-color:#ffffff; border-radius:5px; border:1px solid #CCD3CD; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+         href="https://dev.ost.com" title="Developer Resources">Developer Resources</a>
+       </td>
+      </tr>
+
+      <!-- spacer -->
+      <tr>
+       <td style="height: 30px"></td>
+      </tr>
+
+      <!-- join popcorn -->
+      <tr>
+       <td width="100%" valign="top" align="center" bgcolor="#FF8385"
+        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius:15px; border-color:#FF8385">
+        <a href="https://ost.com/" title="Join Popcorn!"><img
+          src="https://email.ost.com/production/eu/gallery/22436/1564667190337.png" alt="Join Popcorn!" width="45px"
+          height="" style="margin:0; border:0; outline:none; text-decoration:none;">
+        </a>
+        <p align="left" style="padding:15px 0; margin:0">
+         Join Popcorn and start sending and receiving POP tokens now! Sign-up on our homepage to download OST Wallet App
+         and
+         see what's possible with OST Platform.
+        </p>
+        <a
+         style="display:inline-block; background-color:#ffffff; border-radius:5px; border:1px solid #CCD3CD; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+         href="https://ost.com/" title="Join Popcorn">Join Popcorn</a>
+       </td>
+      </tr>
+
+      <!-- spacer -->
+      <tr>
+       <td style="height: 30px"></td>
+      </tr>
+
+      <!-- launch token -->
+      <tr>
+       <td width="100%" valign="top" align="center" bgcolor="#CCD3CD"
+        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius:15px; border-color:#CCD3CD">
+        <a href="https://platform.ost.com/sign-up" title="Launch Token"><img
+          src="https://email.ost.com/production/eu/gallery/22436/1564599290603.png" alt="Launch Token" width="45px"
+          height="" style="margin:0; border:0; outline:none; text-decoration:none;">
+        </a>
+        <p align="left" style="padding:15px 0; margin:0">
+         Launching a Token in your own application is easy with OST Platform. Once registered, OST Platform takes care
+         of the
+         setup, while our Dev Docs guide you through a fast and smooth integration of our SDKs.
+        </p>
+        <a
+         style="display:inline-block; background-color:#ffffff; border-radius:5px; border:1px solid #CCD3CD; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+         href="https://platform.ost.com/sign-up" title="Launch Token">Launch Token</a>
+       </td>
+      </tr>
+
+      <!-- spacer -->
+      <tr>
+       <td style="height: 30px"></td>
+      </tr>
+
+      <!-- explore ost view -->
+      <tr>
+       <td width="100%" valign="top" align="center" bgcolor="#438BAD"
+        style="color:#ffffff !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius:15px; border-color:#438BAD">
+        <a href="{{view_link}}" title="OST View"><img
+          src="https://email.ost.com/production/eu/gallery/22436/1564561606640.png" alt="OST View" width="45px"
+          height="" style="margin:0; border:0; outline:none; text-decoration:none;">
+        </a>
+        <p align="left" style="padding:15px 0; margin:0">
+         Your token smart-contracts are on the Ethereum and OST Blockchains. You can view and explore the contracts and
+         related transactions through the OST Block Explorer.
+        </p>
+        <a
+         style="display:inline-block; background-color:#ffffff; border-radius:5px; border:1px solid #CCD3CD; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+         href="{{view_link}}" title="Token Contracts">Token Contracts</a>
+       </td>
+      </tr>
+
+     </tbody>
+    </table>
+
+    <!-- table for social links -->
+    <table role="presentation" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding:20px 20px 10px;">
+     <tbody>
+
+      <!-- social links -->
+      <tr>
+       <td align="center" style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; margin:0;
+         margin-top:15px; font-size:14px; font-weight:400; text-decoration:none;">
+        <a style="color:#34445b; text-decoration: none;"
+         href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk">
+         <img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="Join Our Slack Space"
+          width="15px" height=""
+          style="margin: 0px 5px -3px 15px; border:0; outline:none; text-decoration:none;">Slack</a>
+
+        <a style="color:#34445b; text-decoration: none;" href="https://twitter.com/ostdotcom">
+         <img src="http://s3.amazonaws.com/asset.pepomail.com/common-assets/images/social-logos/twitter_v3.png"
+          alt="Join Us On Twitter" width="15px" height=""
+          style="margin: 0px 5px -3px 15px; border:0; outline:none; text-decoration:none;">Twitter</a>
+
+        <a style="color:#34445b; text-decoration: none;" href="https://medium.com/ostdotcom">
+         <img src="http://s3.amazonaws.com/asset.pepomail.com/common-assets/images/social-logos/medium_v3.png"
+          alt="Join Us On Medium" width="15px" height=""
+          style="margin: 0px 5px -3px 15px; border:0; outline:none; text-decoration:none;">Medium</a>
+       </td>
+      </tr>
+
+     </tbody>
+    </table>
+
+    <!--- footer -->
+    <table role="footer" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding:0 20px;">
+     <tbody>
+      <tr>
+       <td width="100%" align="center" valign="top"
+        style="color:#000000 !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; font-weight:300; line-height:1.6; letter-spacing:0.5px; padding:0 20px; margin:0">
+        <p>
+         OST Inc. All Rights Reserved.<br>33 Irving Place, Suite 4008, New York, NY 10003<br>
+         <a style="color:#34445b; text-decoration: none;" href="mailto:support@ost.com">support@ost.com</a><br>
+         <a style="color:#ffffff; text-decoration: none;" href="{{optout_confirm_url}}"
+          title="Unsubscribe">Unsubscribe</a><br>
+         <span>{{beacon}}</span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+   </td>
+  </tr>
+ </table>
 
 </body>
 

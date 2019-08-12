@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>OST Platform</title>
+
+ <!--- Inspiration: https://github.com/seanpowell/Email-Boilerplate/blob/master/email.html -->
+ <style type="text/css">
+  #outlook a {
+   padding: 0;
+  }
+
+  body {
+   width: 100% !important;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+   margin: 0;
+   padding: 0;
+  }
+
+  .ExternalClass {
+   width: 100%;
+  }
+
+  .ExternalClass,
+  .ExternalClass p,
+  .ExternalClass span,
+  .ExternalClass font,
+  .ExternalClass td,
+  .ExternalClass div {
+   line-height: 100%;
+  }
+
+  #backgroundTable {
+   margin: 0;
+   padding: 0;
+   width: 100% !important;
+   line-height: 100% !important;
+  }
+
+  table td {
+   border-collapse: collapse;
+  }
+
+
+  @media only screen and (max-device-width: 480px) {
+
+   a[href^="tel"],
+   a[href^="sms"] {
+    text-decoration: none;
+    color: black;
+    pointer-events: none;
+    cursor: default;
+   }
+
+   .mobile_link a[href^="tel"],
+   .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important;
+    pointer-events: auto;
+    cursor: default;
+   }
+  }
+
+  /* iPad (tablets, smaller screens, etc.) */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+   a[href^="tel"],
+   a[href^="sms"] {
+    text-decoration: none;
+    color: blue;
+    /* or whatever your want */
+    pointer-events: none;
+    cursor: default;
+   }
+
+   .mobile_link a[href^="tel"],
+   .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important;
+    pointer-events: auto;
+    cursor: default;
+   }
+  }
+ </style>
+
+ <style>
+  * {
+   box-sizing: border-box;
+  }
+
+  body {
+   background-color: #fff;
+   max-width: 600px;
+   margin: 50px auto;
+   padding: 0px;
+   color: #34445b;
+   text-align: center;
+   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   font-size: 15px;
+   font-weight: 300;
+   line-height: 1.5;
+   letter-spacing: 0.5px;
+   text-rendering: optimizeLegibility;
+   -webkit-text-size-adjust: none;
+  }
+
+  a {
+   color: #34445b;
+   text-decoration: none;
+  }
+
+  h1 {
+   text-transform: capitalize;
+  }
+
+  .container {
+   display: flex;
+   flex-direction: column;
+   background-color: #fff;
+   border-radius: 5px;
+   padding-top: 20px;
+  }
+
+  .logo img {
+   width: 94px;
+   padding: 20px 0px;
+  }
+
+  .title h1 {
+   font-size: 22px;
+   font-weight: 500;
+   margin: 10px 0px;
+  }
+
+  .card {
+   background-color: #fff;
+   border: 1px solid;
+   border-radius: 15px;
+   width: 540px;
+   padding: 2rem;
+   margin: 12px auto;
+   font-weight: 300;
+  }
+
+  .card img {
+   width: 45px;
+  }
+
+  .card h1 {
+   font-size: 18px;
+   font-weight: 350;
+   margin: 10px 0px;
+  }
+
+  .card p {
+   text-align: left;
+  }
+
+  .card-main {
+   background-color: #fff;
+  }
+
+  .card-main .cta-button {
+   background-color: #e4b030;
+   color: #fff;
+  }
+
+  .card-slack {
+   background-color: #34445B;
+   border: #34445B;
+   color: #fff;
+  }
+
+  .card-call {
+   background-color: #FF5F5A;
+   border: #FF5F5A;
+   color: #fff;
+  }
+
+  .card-docs {
+   background-color: #FBD764;
+   border: #FBD764;
+  }
+
+  .card-popcorn {
+   background-color: #FF8385;
+   border: #FF8385;
+  }
+
+  .card-token {
+   background-color: #CCD3CD;
+   border: #CCD3CD;
+  }
+
+  .card-view {
+   background-color: #438BAD;
+   border: #438BAD;
+   color: #fff;
+  }
+
+  .card-benefits {
+   background-color: #FBD764;
+   border: #FBD764;
+   text-transform: capitalize;
+  }
+
+  .cta-button {
+   display: inline-block;
+   background-color: #fff;
+   border-radius: 5px;
+   border: 1px solid #CCD3CD;
+   font-size: 16px;
+   font-weight: 300;
+   letter-spacing: 1px;
+   text-decoration: none;
+   text-transform: capitalize;
+   padding: 15px 30px;
+   margin-top: 15px;
+  }
+
+  .social-links {
+   margin-top: 15px;
+   font-size: 14px;
+   font-weight: 400;
+   text-decoration: none;
+  }
+
+  .social-links img {
+   width: 15px;
+   margin: 0px 5px -3px 15px;
+  }
+
+  .footer {
+   color: #000;
+   font-size: 10px;
+   font-weight: 300;
+   line-height: 1.6;
+   display: block;
+   padding: 5px 0 10px;
+  }
+
+  .footer-unsubscribe a {
+   color: #fff;
+   text-decoration: none;
+  }
+ </style>
+
+</head>
+
+<body class="body">
+
+ <!--- background table -->
+ <table cellpadding="0" cellspacing="0" border="5" id="backgroundTable">
+  <tr>
+   <td>
+
+    <!--- logo  -->
+    <table role="presentation" width="100%" align="center" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding: 20px; border: 2px solid; border-radius: 0px">
+     <tr>
+      <td width="100%" valign="top"
+       style="font-family:Arial, sans-serif; font-size:16px; line-height:1.5em; color:#333333; padding:2em; background-color:#e4e4e4;">
+       <div>
+        I'm a logo
+       </div>
+      </td>
+     </tr>
+    </table>
+
+    <!-- main body -->
+    <table role="presentation" width="100%" align="center" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding: 20px; border: 2px solid; border-radius: 0px">
+     <tbody>
+
+      <!-- title -->
+      <tr>
+       <td class="title" style="padding: 15px; border: 1px dotted">
+        <div>
+         I'm a title
+        </div>
+       </td>
+      </tr>
+
+      <!-- main body -->
+      <tr>
+       <td class="card card-main" style="padding: 15px; border: 1px dotted">
+        <div>
+         I'm the main card
+        </div>
+       </td>
+      </tr>
+
+      <!-- card -->
+      <tr>
+       <td class="card" style="padding: 15px; border: 1px dotted">
+        <div>
+         I'm a card
+        </div>
+       </td>
+      </tr>
+
+      <!-- card -->
+      <tr>
+       <td class="card" style="padding: 15px; border: 1px dotted">
+        <div>
+         I'm another card
+        </div>
+       </td>
+      </tr>
+
+      <!-- card -->
+      <tr>
+       <td class="card" style="padding: 15px; border: 1px dotted">
+        <div>
+         I'm another card
+        </div>
+       </td>
+      </tr>
+
+      <!-- card -->
+      <tr>
+       <td class="card" style="padding: 15px; border: 1px dotted">
+        <div>
+         I'm another card
+        </div>
+       </td>
+      </tr>
+
+     </tbody>
+    </table>
+
+    <!-- social links -->
+    <table role="presentation" width="100%" align="center" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding: 20px; border: 2px solid; border-radius: 0px">
+     <tbody>
+
+      <!-- social links -->
+      <tr>
+       <td class="social-links">
+        <div>
+         I'm a bunch of social links
+        </div>
+       </td>
+      </tr>
+
+
+     </tbody>
+    </table>
+
+    <!--- footer -->
+    <table role="presentation" width="100%" align="center" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding: 20px; border: 2px solid; border-radius: 0px">
+     <tbody>
+      <tr>
+       <td class="footer" style="border: 1px dotted">
+        <div>
+         <p>OST Inc. All Rights Reserved.<br>33 Irving Place, Suite 4008, New York, NY 10003</p>
+         <p><a href="mailto:support@ost.com">support@ost.com</a></p>
+         <p class="footer-unsubscribe"><a href="{{optout_confirm_url}}" title="Unsubscribe">Unsubscribe</a></p>
+         <span>{{beacon}}</span>
+        </div>
+       </td>
+      </tr>
+
+     </tbody>
+    </table>
+
+
+
+   </td>
+  </tr>
+ </table>
+
+</body>
+
+</html>
