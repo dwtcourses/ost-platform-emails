@@ -1,216 +1,233 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>OST Platform</title>
+
+ <!--- Inspiration: https://github.com/seanpowell/Email-Boilerplate/blob/master/email.html -->
+ <style type="text/css">
+  #outlook a {
+   padding: 0;
+  }
+
+  body {
+   width: 100% !important;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+   margin: 0;
+   padding: 0;
+   text-rendering: optimizeLegibility;
+  }
+
+  .ExternalClass {
+   width: 100%;
+  }
+
+  .ExternalClass,
+  .ExternalClass p,
+  .ExternalClass span,
+  .ExternalClass font,
+  .ExternalClass td,
+  .ExternalClass div {
+   line-height: 100%;
+  }
+
+  #backgroundTable {
+   margin: 0;
+   padding: 0;
+   width: 100% !important;
+   line-height: 100% !important;
+  }
+
+  table td {
+   border-collapse: collapse;
+  }
+
+
+  @media only screen and (max-device-width: 480px) {
+
+   a[href^="tel"],
+   a[href^="sms"] {
+    text-decoration: none;
+    color: #34445b;
+    pointer-events: none;
+    cursor: default;
+   }
+
+   .mobile_link a[href^="tel"],
+   .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important;
+    pointer-events: auto;
+    cursor: default;
+   }
+  }
+
+  /* iPad (tablets, smaller screens, etc.) */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+   a[href^="tel"],
+   a[href^="sms"] {
+    text-decoration: none;
+    color: #34445b;
+    /* or whatever your want */
+    pointer-events: none;
+    cursor: default;
+   }
+
+   .mobile_link a[href^="tel"],
+   .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important;
+    pointer-events: auto;
+    cursor: default;
+   }
+  }
+ </style>
+
 </head>
 
-<body
- style="height: 100%;text-align: center;padding: 0;margin: 0;background-color: #9accd7;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;-webkit-text-size-adjust:none; text-rendering: optimizeLegibility; ">
- ​
- <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#9accd7">
-  <tbody>
-   <tr>
-    <td>
-     <table border="0" cellspacing="0" cellpadding="10" width="100%">
-      <tbody>
-       <tr>
-        <td>
-         <table border="0" cellspacing="0" cellpadding="0" width="100%">
-          <tbody>
-           <tr>
-            <td style="height: 20px"></td>
-           </tr>
-          </tbody>
-         </table>
-         <table border="0" cellspacing="0" cellpadding="0" width="100%">
-          <tbody>
-           <tr>
-            <td style="height: 20px"></td>
-           </tr>
-          </tbody>
-         </table>
-         <table width="100%" border="0" cellspacing="0" cellpadding="0"
-          style="margin:0 auto;max-width: 540px;background-color: #fff;padding: 30px 0 10px;border-radius: 5px;">
-          <tbody>
-           <tr>
-            <td>
-             <table border="0" cellspacing="0" cellpadding="0" width="100%">
-              <tbody>
-               <tr>
-                <td>
-                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tbody>
-                   <tr>
-                    <td style="text-align: center">
-                     <a href="https://platform.ost.com/" title="OST Platform">
-                      <img src="https://email.ost.com/production/eu/gallery/22436/1553275678842.png"
-                       alt="OST Platform" width="94">
-                     </a>
-                    </td>
-                   </tr>
-                  </tbody>
-                 </table>
+<body>
 
-                 <!--- Header h1 -->
-                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                  <tbody>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                   <tr>
-                    <td style="width: 90%; display: inline-block;margin: 0 auto;">
-                     <span
-                      style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#168dc1;font-size: 28px;display:block;text-align: center;font-weight: 500;letter-spacing: 0.4px">Time
-                      to Mint Your Tokens
-                     </span>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td style="height: 10px"></td>
-                   </tr>
-                  </tbody>
-                 </table>
+ <!--- pretext header -->
+ <!-- <span style="color: transparent; display: none !important; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; visibility: hidden; width: 0;">This is a pretext header</span> -->
 
-                 <!--- Body message and CTA 1 -->
-                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                  <tbody>
-                   <tr>
-                    <td
-                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
-                     <span style="display: block;">
-                      <p>Hello {{attributes['First Name']}},<br>Your Token setup is complete, and you are close to running your first transactions! Mint your first batch of tokens to proceed.</p>
-                      <p>Step 1 - Launch Your Own Token
+
+ <!--- background table -->
+ <table role="presentation" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="backgroundTable"
+  style="margin:50px auto; max-width:600px; padding:0;">
+  <tr>
+   <td>
+
+    <!--- logo and title -->
+    <table role="header" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin:0px auto; padding:10px 20px;">
+
+     <!-- logo -->
+     <tr>
+      <td width="100%" valign="top" align="center" style="padding:20px;">
+       <a href="https://platform.ost.com/" title="OST Platform">
+        <img src="https://email.ost.com/production/eu/gallery/22436/1553275678842.png" alt="OST Platform" width="94px"
+         height="" style="border:0; outline:none; text-decoration:none; display:block;">
+       </a>
+      </td>
+     </tr>
+
+     <!-- title -->
+     <tr>
+      <td width="100%" valign="top" align="center">
+       <h1
+        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:22px; font-weight:500; text-transform: capitalize; letter-spacing:0.5px; padding:20px 20px 10px; margin:0 auto;">
+        Time to Mint Your Tokens
+       </h1>
+      </td>
+     </tr>
+    </table>
+
+    <!--- table for main text box -->
+    <table role="header" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin:0px auto; padding:10px 20px 20px;">
+
+     <!-- main text box -->
+     <tr style="margin-bottom:20px;">
+      <td width="100%" valign="top" align="center"
+       style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; margin:0; padding:0 20px; border:1px solid; border-radius: 15px; border-color:#ffffff">
+       <p style="text-align:justify; margin:0 0 30px">
+        HHello {{attributes['First Name']}},<br>Your Token setup is complete, and you are close to running your first transactions! Mint your first batch of tokens to proceed.<br>
+        <br>
+        Step 1 - Launch Your Own Token
                        <br><b>Step 2 - Mint Your First Batch of Tokens</b>
                        <br>Step 3 - Run Transactions in the OST Wallet App
                        <br>Step 4 - Integrate OST APIs into Your App and Go-Live!
-                      </p>
-                     </span>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                   <tr>
-                    <td>
-                     <a href="https://{{company_web_domain}}/{{url_prefix}}/token/mint"
-                      style="border-radius:3px;background-color:#e4b030;color:#fff;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                      title="Token Creation Guide">Mint Tokens</a>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                  </tbody>
-                 </table>
+       </p>
+       <!-- CTA -->
+       <a
+        style="display:inline-block; background-color:#e4b030; border-radius:5px; color:#ffffff; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+        href="https://{{company_web_domain}}/{{url_prefix}}/token/mint" title="Mint Tokens">Mint Tokens</a>
+      </td>
+     </tr>
 
-                 <!--- OST View -->
-                 <table border="0" cellspacing="0" cellpadding="0" width="100%" style="background-color:#438BAD">
-                  <tbody>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                   <tr>
-                    <td style="text-align: center">
-                     <a href="{{view_link}}" title="OST View">
-                      <img src="https://email.ost.com/production/eu/gallery/22436/1564561606640.png" alt="OST VIEW"
-                       width="50px">
-                     </a>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td
-                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#fff;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.5px">
-                     <span style="display: block;">
-                      <p>Your Token smart-contracts are on the Ethereum and OST Blockchains. You can view and explore the contracts and related transactions through the OST Block Explorer.
-                      </p>
-                     </span></td>
-                   </tr>
-                   <tr>
-                    <td style="height: 10px"></td>
-                   </tr>
-                   <tr>
-                    <td>
-                     <a href="{{view_link}}"
-                      style="border-radius:3px;background-color:#fff;color:#34445B;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                      title="Explore Token Contracts">Explore Contracts</a>
-                    </td>
-                   </tr>
-                   <tr>
-                    <td style="height: 20px"></td>
-                   </tr>
-                  </tbody>
-                 </table>
-                 ​
-                 <!--- Footer / Connect with us links -->
-                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                  <tbody>
-                   <tr>
-                    <td
-                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#000;font-size: 15px;display:block;text-align: left;font-weight: 500;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
-                     <span style="display: block; text-align: center">
-                      <p><span style="color:#597a84">Connect with us</span><br><a
-                        href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
-                        style="text-decoration: none"><img
-                         src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="OST Slack"
-                         width="15px"></a><a
-                        href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk"
-                        style="text-decoration: none"> Slack </a>
-                       | <a href="https://dev.ost.com" style="text-decoration: none"><img
-                         src="https://email.ost.com/production/eu/gallery/22436/1564596494296.png" alt="OST Docs"
-                         width="15px"></a><a href="https://dev.ost.com" style="text-decoration: none"> Docs </a> | <a
-                        href="https://gitter.im/ostdotcom/OST-Platform" style="text-decoration: none"><img
-                         src="https://email.ost.com/production/eu/gallery/22436/1564599957558.png" alt="OST Gitter"
-                         width="15px"></a><a href="https://gitter.im/ostdotcom/OST-Platform"
-                        style="text-decoration: none"> Gitter</a></p>
-                     </span>
-                    </td>
-                    <td
-                     style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#000;font-size: 10px;display:block;text-align: left;font-weight: 200;line-height: 15px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
-                     <span style="display: block; text-align: center"><br>OST Inc. All Rights Reserved.<br>
-                      33 Irving Place, Suite 4008, New York, NY 10003<br><br>
-                   </tr>
-                  </tbody>
-                 </table>
+    </table>
+    <!-- table for cards -->
+    <table role="presentation" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin:0 auto; max-width:600px; padding:20px 20px;">
 
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </td>
-           </tr>
-          </tbody>
-         </table>
 
-         <!--- Unsubscribe --->
-         <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tbody>
-           <tr>
-            <td style="height: 30px"></td>
-           </tr>
-           <tr>
-            <td style="text-align: center">
-             <a href="{{optout_confirm_url}}" title="Unsubscribe"
-              style="color: #9accd7;font-size: 12px;text-decoration: none">Unsubscribe</a>
-            </td>
-           </tr>
-           <tr>
-            <td style="height: 20px"></td>
-           </tr>
-          </tbody>
-         </table>
-        </td>
-       </tr>
-      </tbody>
-     </table>
-     <span>{{beacon}}</span>
-    </td>
-   </tr>
-  </tbody>
+     <!-- explore ost view -->
+     <tr>
+      <td width="100%" valign="top" align="center" bgcolor="#438BAD"
+       style="color:#ffffff !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; padding:20px; margin:0; border:1px solid; border-radius:15px; border-color:#438BAD">
+       <a href="{{view_link}}" title="OST View"><img
+         src="https://email.ost.com/production/eu/gallery/22436/1564561606640.png" alt="OST View" width="45px" height=""
+         style="margin:0; border:0; outline:none; text-decoration:none;">
+       </a>
+       <p align="justify" style="padding:15px 0; margin:0">
+        Your token smart-contracts are on the Ethereum and OST Blockchains. You can view and explore the contracts and
+        related transactions through the OST Block Explorer.
+       </p>
+       <a
+        style="display:inline-block; background-color:#ffffff; border-radius:5px; color:#34445b; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+        href="{{view_link}}" title="Token Contracts">Token Contracts</a>
+      </td>
+     </tr>
+    </table>
+
+    <!-- table for social links -->
+    <table role="presentation" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding:20px 20px 10px;">
+     <tbody>
+
+      <!-- social links -->
+      <tr>
+       <td align="center" style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; margin:0;
+         margin-top:15px; font-size:14px; font-weight:400; text-decoration:none;">
+        <a style="color:#34445b; text-decoration: none;"
+         href="https://join.slack.com/t/tryost/shared_invite/enQtNjk5MTI4NDY5MjIyLTFlZWYyODNhMjA0YmNmM2ZmMTJkZDM4MDU0NGJlNDc3ZWEwMjY5ZWNiNjNiZDcyOTIyZTljNGFmN2E2NzY2MDk">
+         <img src="https://email.ost.com/production/eu/gallery/22436/1564591258155.png" alt="Join Our Slack Space"
+          width="15px" height=""
+          style="margin: 0px 5px -3px 15px; border:0; outline:none; text-decoration:none;">Slack</a>
+
+        <a style="color:#34445b; text-decoration: none;" href="https://twitter.com/ostdotcom">
+         <img src="http://s3.amazonaws.com/asset.pepomail.com/common-assets/images/social-logos/twitter_v3.png"
+          alt="Join Us On Twitter" width="15px" height=""
+          style="margin: 0px 5px -3px 15px; border:0; outline:none; text-decoration:none;">Twitter</a>
+
+        <a style="color:#34445b; text-decoration: none;" href="https://medium.com/ostdotcom">
+         <img src="http://s3.amazonaws.com/asset.pepomail.com/common-assets/images/social-logos/medium_v3.png"
+          alt="Join Us On Medium" width="15px" height=""
+          style="margin: 0px 5px -3px 15px; border:0; outline:none; text-decoration:none;">Medium</a>
+       </td>
+      </tr>
+
+     </tbody>
+    </table>
+
+    <!--- footer -->
+    <table role="footer" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
+     style="margin: 0 auto; max-width: 600px; padding:0 20px;">
+     <tbody>
+      <tr>
+       <td width="100%" align="center" valign="top"
+        style="color:#000000 !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; font-weight:300; line-height:1.6; letter-spacing:0.5px; padding:0 20px; margin:0">
+        <p>
+         OST Inc. All Rights Reserved.<br>33 Irving Place, Suite 4008, New York, NY 10003<br>
+         <a style="color:#34445b; text-decoration: none;" href="mailto:support@ost.com">support@ost.com</a><br>
+         <a style="color:#ffffff; text-decoration: none;" href="{{optout_confirm_url}}"
+          title="Unsubscribe">Unsubscribe</a><br>
+         <span>{{beacon}}</span>
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+
+   </td>
+  </tr>
  </table>
+
 </body>
 
 </html>
