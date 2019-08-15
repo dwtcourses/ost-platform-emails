@@ -136,89 +136,71 @@
       <td width="100%" valign="top" align="center"
        style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; margin:0; padding:0 20px; border:1px solid; border-radius: 15px; border-color:#ffffff">
        <p style="text-align:justify; margin:0 0 8px">
-          Hello {{attributes['First Name']}},<br>You have been invited to join the OST Wallet App.
-          Follow the instructions below to claim your tokens and start transacting with your colleagues.<br>
+        Hello {{attributes['First Name']}},<br>You have been invited to join the OST Wallet App. Follow the instructions
+        below to claim your tokens and start transacting with your colleagues.<br>
         <br>
-        <b>Step 1 - </b> Download the OST Wallet App on your mobile device.
-                      iPhone users need to first download the Test Flight app from the App Store.
-                    </p>
-                     </td>
-                    </tr>
-                  </table>
+        <b>Step 1 - </b>Download the OST Wallet App on your mobile device. iPhone users need to first download the Test
+        Flight app from the App Store.
+       </p>
 
-     <!--- Download apps -->
-                   <tr>
-                    <td style="text-align:center">
-                     <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                      <tbody>
-                       <tr>
-                        <td style="text-align: right">
-                         <a href="https://testflight.apple.com/join/gexbd3Bu" title="iOS - Download App">
-                          <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1558956134684.png"
-                           width="150">
-                         </a>
-                        </td>
-                        <td style="width: 10px"></td>
-                        <td style="text-align: left"><a
-                          href="https://play.google.com/store/apps/details?id=com.ost.ostwallet"
-                          title="Android - Download App">
-                          <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1560939118196.png"
-                           width="150">
-                         </a>
-                        </td>
-                       </tr>
-                      </tbody>
-                     </table>
-                     <br>
+       <!--- Download apps -->
+       <table border="0" cellspacing="0" cellpadding="0" width="100%" style="padding:20px 0">
+        <tr>
+         <td style="text-align: right">
+          <a href="https://testflight.apple.com/join/gexbd3Bu" title="iOS - Download App">
+           <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1558956134684.png" width="150">
+          </a>
+         </td>
+         <td style="width: 10px"></td>
+         <td style="text-align: left"><a href="https://play.google.com/store/apps/details?id=com.ost.ostwallet"
+           title="Android - Download App">
+           <img src="https://emailer.stagingost.com/production/eu/gallery/22457/1560939118196.png" width="150">
+          </a>
+         </td>
+        </tr>
+       </table>
 
-          <!-- main text box -->
-     <tr style="margin-bottom:20px;">
-      <td width="100%" valign="top" align="center"
-       style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; margin:0; padding:0 20px; border:1px solid; border-radius: 15px; border-color:#ffffff">
        <p style="text-align:justify; margin:0 0 30px">
         <b>Step 2 - </b> Click the button below on your mobile device.
-                    </p>
-                     </td>
-                    </tr>
-                  </table>  
-          
-                  <!--- Click on button -->
-          <tr>
-              <td>
-               <a href="{{deep_link_demo_app_launch_url}}{{exclude_tracking}}"
-                style="border-radius:3px;background-color:#e4b030;color:#fff;text-decoration:none;padding:15px 30px;font-weight:300;letter-spacing:1px;display:inline-block;font-size:16px"
-                title="Claim Tokens">Claim Tokens</a>
-              </td>
-             </tr>
+       </p>
 
-             <!--- Spacer -->
-             <tr>
-              <td style="height: 40px"></td>
-             </tr>
+       <!-- CTA -->
+       <a
+        style="display:inline-block; background-color:#e4b030; border-radius:5px; color:#ffffff; font-size:16px; letter-spacing:1px; text-decoration:none; text-transform:capitalize; padding:15px 30px;"
+        href="{{deep_link_demo_app_launch_url}}{{exclude_tracking}}" title="Claim Tokens">Claim Tokens</a>
 
-             <!--- QR code -->
-             <tr>
-              <td
-               style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#597a84;font-size: 15px;display:block;text-align: left;font-weight: 300;line-height: 24px;width: 90%;margin: 0 auto;letter-spacing: 0.4px">
-               <span style="display: block;">Your Token QR code is below. Others can scan this to claim tokens and join you in the app.</span>
-              </td>
-             </tr>
+      </td>
+     </tr>
 
-             <tr>
-              <td style="height: 20px"></td>
-             </tr>
-             <tr>
-              <td style="text-align: center">
-               <img src="{{qr_code_url}}" alt="QR code URL" height="300" width="300">
-              </td>
-             </tr>  
-             
-             <tr>
-                <td style="height: 20px"></td>
-               </tr>
+     <!--- spacer -->
+     <tr>
+      <td style="height: 30px"></td>
+     </tr>
 
-              </tbody>
-             </table>
+     <!--- QR code -->
+     <tr>
+       <td width="100%" valign="top" align="justify"
+       style="color:#34445b !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:15px; font-weight:300; line-height:1.5; letter-spacing:0.5px; margin:0; padding:0 20px; border:1px solid; border-radius: 15px; border-color:#ffffff">
+       <span style="display: block;">Your Token QR code is below. Others can scan this to claim tokens and join you in
+         the app.</span>
+       </td>
+      </tr>
+
+     <tr>
+      <td style="height: 20px"></td>
+     </tr>
+
+     <tr>
+      <td style="text-align: center">
+       <img src="{{qr_code_url}}" alt="QR code URL" height="300" width="300">
+      </td>
+     </tr>
+
+     <tr>
+      <td style="height: 20px"></td>
+     </tr>
+
+    </table>
 
     <!-- table for cards -->
     <table role="presentation" width="100%" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0"
